@@ -1,0 +1,99 @@
+# Project: drpgsprviewer
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = ../windows/build/drpgsprviewer_private.res
+OBJ  = ../windows/build/drpgsprviewer.o ../windows/build/svViewSprite.o ../windows/build/deCmdLineArgs.o ../windows/build/decException.o ../windows/build/decBaseFileReader.o ../windows/build/decBaseFileWriter.o ../windows/build/decDiscFileReader.o ../windows/build/decDiscFileWriter.o ../windows/build/decPath.o ../windows/build/svSprite.o ../windows/build/svSpriteImage.o ../windows/build/svSpriteLoader.o ../windows/build/svDialogInfo.o ../windows/build/svAnimation.o ../windows/build/svAnimationSet.o ../windows/build/svAnimationLoader.o ../windows/build/svTileLoader.o ../windows/build/svWindowMain.o ../windows/build/svMap.o ../windows/build/svMapLoader.o ../windows/build/svMapField.o ../windows/build/svViewMap.o ../windows/build/svViewRenderMap.o $(RES)
+LINKOBJ  = ../windows/build/drpgsprviewer.o ../windows/build/svViewSprite.o ../windows/build/deCmdLineArgs.o ../windows/build/decException.o ../windows/build/decBaseFileReader.o ../windows/build/decBaseFileWriter.o ../windows/build/decDiscFileReader.o ../windows/build/decDiscFileWriter.o ../windows/build/decPath.o ../windows/build/svSprite.o ../windows/build/svSpriteImage.o ../windows/build/svSpriteLoader.o ../windows/build/svDialogInfo.o ../windows/build/svAnimation.o ../windows/build/svAnimationSet.o ../windows/build/svAnimationLoader.o ../windows/build/svTileLoader.o ../windows/build/svWindowMain.o ../windows/build/svMap.o ../windows/build/svMapLoader.o ../windows/build/svMapField.o ../windows/build/svViewMap.o ../windows/build/svViewRenderMap.o $(RES)
+LIBS =  -L"C:/Programs/Dev-Cpp/lib" -mwindows -lFOX-1.6 -lws2_32  -s 
+INCS =  -I"C:/Programs/Dev-Cpp/include"  -I"C:/Programs/Dev-Cpp/include/Fox-1.4" 
+CXXINCS =  -I"C:/Programs/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"C:/Programs/Dev-Cpp/include/c++/3.4.2/backward"  -I"C:/Programs/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"C:/Programs/Dev-Cpp/include/c++/3.4.2"  -I"C:/Programs/Dev-Cpp/include"  -IC:/msys32/mingw32/include/fox-1.6
+BIN  = build/drpgSprViewer.exe
+CXXFLAGS = $(CXXINCS) -DDEBUG_RELOCATE_STDOUT   -fexpensive-optimizations -O3
+CFLAGS = $(INCS) -DDEBUG_RELOCATE_STDOUT   -fexpensive-optimizations -O3
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before build/drpgSprViewer.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "build\drpgSprViewer.exe" $(LIBS)
+
+../windows/build/drpgsprviewer.o: ../src/drpgsprviewer.cpp
+	$(CPP) -c ../src/drpgsprviewer.cpp -o ../windows/build/drpgsprviewer.o $(CXXFLAGS)
+
+../windows/build/svViewSprite.o: ../src/gui/svViewSprite.cpp
+	$(CPP) -c ../src/gui/svViewSprite.cpp -o ../windows/build/svViewSprite.o $(CXXFLAGS)
+
+../windows/build/deCmdLineArgs.o: ../src/common/deCmdLineArgs.cpp
+	$(CPP) -c ../src/common/deCmdLineArgs.cpp -o ../windows/build/deCmdLineArgs.o $(CXXFLAGS)
+
+../windows/build/decException.o: ../src/common/exceptions/decException.cpp
+	$(CPP) -c ../src/common/exceptions/decException.cpp -o ../windows/build/decException.o $(CXXFLAGS)
+
+../windows/build/decBaseFileReader.o: ../src/common/file/decBaseFileReader.cpp
+	$(CPP) -c ../src/common/file/decBaseFileReader.cpp -o ../windows/build/decBaseFileReader.o $(CXXFLAGS)
+
+../windows/build/decBaseFileWriter.o: ../src/common/file/decBaseFileWriter.cpp
+	$(CPP) -c ../src/common/file/decBaseFileWriter.cpp -o ../windows/build/decBaseFileWriter.o $(CXXFLAGS)
+
+../windows/build/decDiscFileReader.o: ../src/common/file/decDiscFileReader.cpp
+	$(CPP) -c ../src/common/file/decDiscFileReader.cpp -o ../windows/build/decDiscFileReader.o $(CXXFLAGS)
+
+../windows/build/decDiscFileWriter.o: ../src/common/file/decDiscFileWriter.cpp
+	$(CPP) -c ../src/common/file/decDiscFileWriter.cpp -o ../windows/build/decDiscFileWriter.o $(CXXFLAGS)
+
+../windows/build/decPath.o: ../src/common/file/decPath.cpp
+	$(CPP) -c ../src/common/file/decPath.cpp -o ../windows/build/decPath.o $(CXXFLAGS)
+
+../windows/build/svSprite.o: ../src/sprite/svSprite.cpp
+	$(CPP) -c ../src/sprite/svSprite.cpp -o ../windows/build/svSprite.o $(CXXFLAGS)
+
+../windows/build/svSpriteImage.o: ../src/sprite/svSpriteImage.cpp
+	$(CPP) -c ../src/sprite/svSpriteImage.cpp -o ../windows/build/svSpriteImage.o $(CXXFLAGS)
+
+../windows/build/svSpriteLoader.o: ../src/sprite/svSpriteLoader.cpp
+	$(CPP) -c ../src/sprite/svSpriteLoader.cpp -o ../windows/build/svSpriteLoader.o $(CXXFLAGS)
+
+../windows/build/svDialogInfo.o: ../src/gui/svDialogInfo.cpp
+	$(CPP) -c ../src/gui/svDialogInfo.cpp -o ../windows/build/svDialogInfo.o $(CXXFLAGS)
+
+../windows/build/svAnimation.o: ../src/animation/svAnimation.cpp
+	$(CPP) -c ../src/animation/svAnimation.cpp -o ../windows/build/svAnimation.o $(CXXFLAGS)
+
+../windows/build/svAnimationSet.o: ../src/animation/svAnimationSet.cpp
+	$(CPP) -c ../src/animation/svAnimationSet.cpp -o ../windows/build/svAnimationSet.o $(CXXFLAGS)
+
+../windows/build/svAnimationLoader.o: ../src/animation/svAnimationLoader.cpp
+	$(CPP) -c ../src/animation/svAnimationLoader.cpp -o ../windows/build/svAnimationLoader.o $(CXXFLAGS)
+
+../windows/build/svTileLoader.o: ../src/tile/svTileLoader.cpp
+	$(CPP) -c ../src/tile/svTileLoader.cpp -o ../windows/build/svTileLoader.o $(CXXFLAGS)
+
+../windows/build/svWindowMain.o: ../src/gui/svWindowMain.cpp
+	$(CPP) -c ../src/gui/svWindowMain.cpp -o ../windows/build/svWindowMain.o $(CXXFLAGS)
+
+../windows/build/svMap.o: ../src/map/svMap.cpp
+	$(CPP) -c ../src/map/svMap.cpp -o ../windows/build/svMap.o $(CXXFLAGS)
+
+../windows/build/svMapLoader.o: ../src/map/svMapLoader.cpp
+	$(CPP) -c ../src/map/svMapLoader.cpp -o ../windows/build/svMapLoader.o $(CXXFLAGS)
+
+../windows/build/svMapField.o: ../src/map/svMapField.cpp
+	$(CPP) -c ../src/map/svMapField.cpp -o ../windows/build/svMapField.o $(CXXFLAGS)
+
+../windows/build/svViewMap.o: ../src/gui/svViewMap.cpp
+	$(CPP) -c ../src/gui/svViewMap.cpp -o ../windows/build/svViewMap.o $(CXXFLAGS)
+
+../windows/build/svViewRenderMap.o: ../src/gui/svViewRenderMap.cpp
+	$(CPP) -c ../src/gui/svViewRenderMap.cpp -o ../windows/build/svViewRenderMap.o $(CXXFLAGS)
+
+../windows/build/drpgsprviewer_private.res: drpgsprviewer_private.rc 
+	$(WINDRES) -i drpgsprviewer_private.rc --input-format=rc -o ../windows/build/drpgsprviewer_private.res -O coff 

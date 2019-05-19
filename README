@@ -1,0 +1,76 @@
+﻿/~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\
+|*)     DRPG Sprite Viewer - 1.0 by Dragonlord     (*|
+|*)                  roland@rptd.ch                (*|
+\~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~/
+~~~~~~~~~ __/v \/v v\___/v VVv V\_____/Vv\__ ~~~~~~~~~
+ ~~~~  __/v           V           VvV       V\__  ~~~~ 
+ \  \_/Vv     ____     _       _     ____      V\_/  /
+  |@|          )  \_    \ _|_ /    _/  (          |@|
+  \  \        )_____\_ `>¬.=.¬<´ _/_____(        /  /
+  |**|         )_   / \_/\o=o/\_/ \   _(         |**|
+ / /\ \          )_/__/ \ VvV / \__\_(          / /\ \
+_VV__VV____________VVVv___~*~___vVVV____________VV__VV_
+                      ~@œ¢#8#¢œ@~
+                       ~~~*#*~~~
+                          ~~~
+
+This is a custom build of Digimon RPG Sprite Viewer, that auto
+export all seen sprites into PNG images (the sprites will be
+saved at the executable folder, with a index suffix).
+
+
+
+URL to original codebase, not at github:
+https://withthewill.net/threads/14795-Digimon-RPG-Sprite-Viewer-Sources
+http://rptd.ch/misc/games/drpgsprviewer-1.0.7z
+
+Table of Contents //
+///////////////////
+
+0. Legal Disclaimer
+1. Download
+2. Requirements
+
+
+0. Legal Disclaimer //
+/////////////////////
+
+This application allows to display tile files from Digimon RPG
+game (or short DRPG as it is often called). This is the one and
+only intended purpose. The author can not be held responsible for
+misusing or incorrectly using the application for any other
+purpose. The use of this application happens on your own risk.
+The author can not be held responsible for any potential damage
+caused due to the usage of this software.
+
+This application is distribute under the terms of the GNU General
+Public License v2 or later (at your option).
+
+The software is distributed as is without guarantee to run or
+compile since it's old software released for educational purpose.
+
+
+
+2. Download //
+/////////////
+You can download this tool at Releases 
+https://github.com/elsemieni/drpgsprviewer-PNG/releases 
+...or just clone/download this repository. 
+
+
+
+
+2. Requirements //
+/////////////////
+
+To build the software use Dev-Cpp or import the Makefile into your
+IDE of choice. Compilation works only on Windows. Requires a FOX-1.x
+build either static or dynamic including the necessary dependencies
+like PNG, JPEG and so forth.
+
+The current build (Auto PNG export) was built with MSYS2-MinGW. For
+compile the executable, please install the dependencies and configure
+Makefile.win as desired (you can use help of pkg-config if you need),
+then build the package with:
+
+make -f Makefile.win
